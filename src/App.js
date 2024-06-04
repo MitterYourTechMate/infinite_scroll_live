@@ -56,7 +56,9 @@ function App() {
         )
       })}
        </Grid>
-       <Button variant='contained' style={{backgroundColor:"black", margin:"1%"}} onClick={() => setPage(page + 1)}>LOAD MORE</Button>
+       {images.length !== data.length &&
+        <Button variant='contained' style={{backgroundColor:"black", margin:"1%"}} onClick={() => setPage(page + 1)}>LOAD MORE</Button>
+       }
     </div>
   );
 }
